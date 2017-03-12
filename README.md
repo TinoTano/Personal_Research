@@ -5,7 +5,7 @@ To prevent these problems we need to reduce these operations. Are collision chec
 
 One way to reduce the operations needed in those situations is using **Space partitioning systems**.
 
-#Space Partitioning
+## [](#header-2)Space Partitioning
 
 Space partitioning systems divides the space into regions and then the same system is recursively applied into these new formed regions. These regions can be organized into a **Tree**.
 
