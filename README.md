@@ -1,7 +1,2 @@
 
-eveweewfwe
-
-wefewfwe
-ewf
-ef
-ewewf
+Personal research for project 2
