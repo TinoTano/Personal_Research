@@ -28,20 +28,20 @@ Quadtree is a tree data structure used to divide a 2D space into 4 nodes(childs)
 
 
 ![](http://doi.ieeecomputersociety.org/cms/Computer.org/dl/trans/tp/2009/07/figures/ttp20090711781.gif)
-###### You can see how the space is divided in 4 nodes and how it looks in a tree form.
+##### You can see how the space is divided in 4 nodes and how it looks in a tree form.
 
 The quadtree starts as a single node. The objects added on the quadtree are added to this single node and when the maximum objects per node (specified by you) is reached, it will split into 4 childs creating a new level in the tree and place each object to the corresponding child depending on their place in the 2D space.
 
 ![](https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Point_quadtree.svg/450px-Point_quadtree.svg.png)
-###### The white cercles represents the objects.
+##### The white cercles represents the objects.
 
 The objects that fits entirely inside the new nodes are pushed down to the next level (child node), instead, they remain in the same level (parent).
 
 ![](http://www.kyleschouviller.com/wp-content/images/_quadTree00.jpg) 
-###### The object is inside level 2 of the three, while level 1, the parent, is the entire box.
+##### The object is inside level 2 of the three, while level 1, the parent, is the entire box.
 
 ![](http://www.kyleschouviller.com/wp-content/images/_quadTree01.jpg)
-###### If doesn't fit, the object remains at parent.
+##### If doesn't fit, the object remains at parent.
 
 As you can see this method groups the objects that are near in the same node and the ones that are far from them on others. That means that is not necessary to perform expensive operations like collision checks between distant objects, only in the objects that are placed in the same node.
 
@@ -184,10 +184,10 @@ We have the Quadtree working and we can visualize it, so let's see it in action!
 
 This is the result:
 ![](https://i.gyazo.com/a88e900ca459a8269559542d945df55d.gif)
-###### Nodes dividing when more than 2 objects are inside.
+##### Nodes dividing when more than 2 objects are inside.
 
 ![](https://i.gyazo.com/f4e49ac4a1762b4e536b4a61e48d8f86.gif)
-###### Nodes modifying when objects enter/leave nodes.
+##### Nodes modifying when objects enter/leave nodes.
 
 ### Extra
 
