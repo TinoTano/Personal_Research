@@ -53,15 +53,15 @@ Here you can see quadtree in action:
 
 The theory and the images above can be found in the following links:
 
-* [https://en.wikipedia.org/wiki/Quad_tree](Wikipedia)
+* [Wikipedia](https://en.wikipedia.org/wiki/Quad_tree)
 
-* [http://www.mikechambers.com/blog/2011/03/21/javascript-quadtree-implementation/](Quadtree implementation in javascript with example)
+* [Quadtree implementation in javascript with example](http://www.mikechambers.com/blog/2011/03/21/javascript-quadtree-implementation/)
 
-* [https://gamedevelopment.tutsplus.com/tutorials/quick-tip-use-quadtrees-to-detect-likely-collisions-in-2d-space--gamedev-374](2D collisions with Quadtrees)
+* [2D collisions with Quadtrees](https://gamedevelopment.tutsplus.com/tutorials/quick-tip-use-quadtrees-to-detect-likely-collisions-in-2d-space--gamedev-374)
 
-* [http://www.kyleschouviller.com/wsuxna/quadtree-source-included/](More info of Quadtree used in 2D collisions)
+* [More info of Quadtree used in 2D collisions](http://www.kyleschouviller.com/wsuxna/quadtree-source-included/)
 
-* [http://blog.notdot.net/2009/11/Damn-Cool-Algorithms-Spatial-indexing-with-Quadtrees-and-Hilbert-Curves](Information about Quadtree)
+* [Information about Quadtree](http://blog.notdot.net/2009/11/Damn-Cool-Algorithms-Spatial-indexing-with-Quadtrees-and-Hilbert-Curves)
 
 # Implementation (c++)
 Now that you know that **Quadtrees** can be helpfull to reduce operations needed we will see how to implement them in our project following an **Exercise** 
