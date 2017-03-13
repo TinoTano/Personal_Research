@@ -119,7 +119,7 @@ Now the Quadtree class is done but if we want to use it we need to create it. In
 
 _All the steps will be done inside Collision.cpp and Collision.h. You can find them inside Modules folder._
 
-* Declare a variable of type QuadTree (the class we created).
+* Declare a variable of type Quadtree (the class we created before) and initialize it with the screen Rect.
 * Declare a list/vector to store the collisions.
 * Declare a list/vector to store the tree nodes to draw them later.
 
@@ -130,9 +130,9 @@ All the next steps are done in the Update function.
 
 After the quadtree have all the colliders, we have to iterate through each collider.
 
-* While iterating we need to clean the collisions list/vector because as node before, the potential collisions can be different.
+* While iterating we need to clean the collisions list/vector because as before with nodes, the potential collisions can be different.
 * Now it's time to retrieve the potential collisions for the current collider and store them inside the collisions list.
-* If we found potential collisions then we need to iterate throught them and check if they are colliding with the initial object. **Note:** You can do it like in brute force method.
+* If we found potential collisions then we need to iterate throught them and check if they are colliding with the initial object. **Note:** You can do it like in brute force method. **Note2:** Remember to increase the value of quadTreeChecks to see the result on the tittle screen.
 
 We are finish with the QuadTree implementation for collisions!
 
