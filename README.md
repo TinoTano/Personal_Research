@@ -189,7 +189,7 @@ This is the result:
 ![](https://i.gyazo.com/f4e49ac4a1762b4e536b4a61e48d8f86.gif)
 ##### Nodes modifying when objects enter/leave nodes.
 
-### Extra
+### Extra exercises
 
 You will see that some objects that are near are not set as potential collisions. That's because they are in a different node. Remember that if the objects doesn't fit **Entirely** in node Rect it will remain in the parent.
 
