@@ -1,4 +1,4 @@
-While creating videogames we will notice that they are full of expensive operations that needs a high amount of resources. Draw calls (objects, characters, maps), collisions... 
+While creating videogames we will notice that they are full of expensive operations that needs a high amount of resources. Draw calls (objects, characters, maps), collisions, locate objects...
 
 These actions can bring down our game performance as the number of game objects increases.
 Think in a game where it's necessary to check the collisions between objects every frame. If there are 5 objects on the scene, the game needs to check every pair of them. 5 objects is not a high number of checks (5 objects * 4 other objects = 20 checks), but what will happen if the scene have 50 objects? 50x49 = 2450 checks, and 100 objects? and 200?... That's a lot of checks every frame.
@@ -7,7 +7,8 @@ Think in a game where it's necessary to check the collisions between objects eve
 
 To prevent these problems we need to reduce these operations. 
 
-Are collision checks necessary if the objects to check are in diffrent parts of the screen? Or necessary to check if every object is inside the screen so we can draw it? Wouldn't be better if we only take in acount the collisions if the objects are near? Or check only the ojects inside the screen skipping the ones outside?
+Are collision checks necessary if the objects are in diffrent parts of the screen/world? 
+If we are creating a game with armies of hundreds of units fighting with other armies and need to attack the near enemies, is necessary to iterate through all the scene units? Wouldn't be better if we only take into account if the objects are near?
 
 For sure this will reduce the operations we need to do every frame.
 
@@ -46,7 +47,22 @@ Here you can see quadtree in action:
 
 ![](http://i65.tinypic.com/2wps1tu.gif)
 
-Now that you know that **Quadtrees** can be helpfull with our problem we will see how to implement them in our project following an **Exercise** 
+## Documentation
+
+The theory and the images above can be found in the following links:
+
+* [https://en.wikipedia.org/wiki/Quad_tree](Wikipedia)
+
+* [http://www.mikechambers.com/blog/2011/03/21/javascript-quadtree-implementation/](Quadtree implementation in javascript with example)
+
+* [https://gamedevelopment.tutsplus.com/tutorials/quick-tip-use-quadtrees-to-detect-likely-collisions-in-2d-space--gamedev-374](2D collisions with Quadtrees)
+
+* [http://www.kyleschouviller.com/wsuxna/quadtree-source-included/](More info of Quadtree used in 2D collisions)
+
+* [http://blog.notdot.net/2009/11/Damn-Cool-Algorithms-Spatial-indexing-with-Quadtrees-and-Hilbert-Curves](Information about Quadtree)
+
+# Implementation (c++)
+Now that you know that **Quadtrees** can be helpfull to reduce operations needed we will see how to implement them in our project following an **Exercise** 
 
 ## Exercise
 In the link below you can download a Visual Studio 2015 project with a simple 2D Engine made using SDL2 and the necessaries TODO's. Below you can see each TODO steps.
@@ -120,10 +136,13 @@ After the quadtree have all the colliders, we have to iterate through each colli
 
 We are finish with the QuadTree implementation for collisions!
 
-See how the collision checks are reduced and the time needed:
+See how the collision checks and the time needed for each method is reduced:
 
-![](http://i67.tinypic.com/2j2do3q.png)
+![](http://i64.tinypic.com/23lgy1l.png)
 
+As you can see when we have low objects to check, the time needed is similar. Why? Because in Quadtree method we need to clear the tree and retrieve the potential colliders while the brute force method goes straight. But look the time when the number of objects is high. Here you can see a big difference. 
+
+So, are these methods always better? If you need to perfom a high number of operations, absolutely yes.
 
 ### TODO 4
 
@@ -142,8 +161,11 @@ _We can place the following code at the end of the Update function._
 
 Here is where we will use the GetNodes(...) function and the node list/vector we have created before.
 
+* Clear node list/vector.
 * Call the function GetNodes() with the node list/vector to fill.
 * Iterate throught the list nodes and call App->render->DrawQuad() with the node Rect, desired color and set _filled_ to false.
+
+![](http://i63.tinypic.com/35jkvv6.png)
 
 Now it's done. We can see the the potential collisions and the Quadtree nodes!
 
@@ -151,8 +173,14 @@ Now it's done. We can see the the potential collisions and the Quadtree nodes!
 
 We have the Quadtree working and we can visualize it, so let's see it in action!
 
-* Uncomment the lines for this TODO inside the Update function in EntityManager.cpp. 
+* Uncomment the lines for this TODO inside the Update function in EntityManager.cpp.
 
+This is the result:
+![](https://i.gyazo.com/a88e900ca459a8269559542d945df55d.gif)
+###### Nodes dividing when more than 2 objects are inside.
+
+![](https://i.gyazo.com/f4e49ac4a1762b4e536b4a61e48d8f86.gif)
+###### Nodes modifying when objects enter/leave nodes.
 
 ### Extra
 
@@ -162,4 +190,8 @@ You will see that some objects that are near are not set as potential collisions
 
 If you did the last change, you will see that now nodes are dividing more times than before (they are creating more tree levels). It's good to place a max number of levels to skip node division if it is reached.
 
-* Impement a max level for the tree to prevent the node division.
+* Implement a max level for tree to prevent excessive node division.
+
+## Contact
+
+Feel free to contact me at _elsuperchowchow@gmail.com_
