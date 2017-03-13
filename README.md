@@ -20,6 +20,8 @@ Space partitioning systems divides the space into regions and then the same syst
 
 The common **Trees** used in videogames are the *BSP tree, Octree and k-d tree* for 3D games and *Quadtree* for 2D games.
 
+In this research i want to focus on 2D games so i'll talk about **Quadtrees**. 
+
 ## Quadtree
 
 Quadtree is a tree data structure used to divide a 2D space into 4 nodes(childs) and recursively subdivide each child node into 4 more. It's an extended version of **Binary tree** or a two-dimensional analog of **Octree**.
@@ -31,7 +33,7 @@ Quadtree is a tree data structure used to divide a 2D space into 4 nodes(childs)
 The quadtree starts as a single node. The objects added on the quadtree are added to this single node and when the maximum objects per node (specified by you) is reached, it will split into 4 childs creating a new level in the tree and place each object to the corresponding child depending on their place in the 2D space.
 
 ![](https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Point_quadtree.svg/450px-Point_quadtree.svg.png)
-###### [](#header-6)The white cercles represents the objects.
+###### The white cercles represents the objects.
 
 The objects that fits entirely inside the new nodes are pushed down to the next level (child node), instead, they remain in the same level (parent).
 
