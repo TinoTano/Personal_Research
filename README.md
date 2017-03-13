@@ -67,7 +67,12 @@ The theory and the images above can be found in the following links:
 Now that you know that **Quadtrees** can be helpfull to reduce operations needed we will see how to implement them in our project following an **Exercise** 
 
 ## Exercise
-In the link below you can download a Visual Studio 2015 project with a simple 2D Engine made using SDL2 and the necessaries TODO's. Below you can see each TODO steps.
+In the link below you can download a Visual Studio 2015 project with a simple 2D Engine made using SDL2 and the necessaries TODO's.
+You can also find a solution to see how it's the result after all the TODO's are finished.
+
+[https://github.com/TinoTano/Personal_Research/releases/download/1.0/Exercise.zip](Download the Exercise)
+
+Below you can see each TODO steps.
 For this exercise we will use the quadtree to optimize the collisions between characters. 
 In the following lines i'll refer to the character colliders as objects because quadtree can be used for other things (not just colliders) and the implementation is the same.
 
