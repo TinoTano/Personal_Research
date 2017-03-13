@@ -70,7 +70,7 @@ Now that you know that **Quadtrees** can be helpfull to reduce operations needed
 In the link below you can download a Visual Studio 2015 project with a simple 2D Engine made using SDL2 and the necessaries TODO's.
 You can also find a solution to see how it's the result after all the TODO's are finished.
 
-[https://github.com/TinoTano/Personal_Research/releases/download/1.0/Exercise.zip](Download the Exercise)
+[Download the Exercise](https://github.com/TinoTano/Personal_Research/releases/download/1.0/Exercise.zip)
 
 Below you can see each TODO steps.
 For this exercise we will use the quadtree to optimize the collisions between characters. 
