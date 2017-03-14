@@ -1,0 +1,42 @@
+﻿  Collision.cpp
+Collision.cpp(116): warning C4018: '<': signed/unsigned mismatch
+Collision.cpp(163): warning C4800: 'SDL_bool': forcing value to bool 'true' or 'false' (performance warning)
+  Entity.cpp
+  EntityManager.cpp
+  FileSystem.cpp
+  Main.cpp
+  Application.cpp
+Application.cpp(225): warning C4018: '<': signed/unsigned mismatch
+  Input.cpp
+  Map.cpp
+Map.cpp(101): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+Map.cpp(102): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+  p2Log.cpp
+  Pathfinding.cpp
+c:\users\admin\documents\personal research\quadtree\exercise\motor2d\p2Point.h(124): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  c:\users\admin\documents\personal research\quadtree\exercise\motor2d\p2Point.h(120): note: while compiling class template member function 'int p2Point<int>::DistanceTo(const p2Point<int> &) const'
+  Pathfinding.cpp(175): note: see reference to function template instantiation 'int p2Point<int>::DistanceTo(const p2Point<int> &) const' being compiled
+  c:\users\admin\documents\personal research\quadtree\exercise\motor2d\PathFinding.h(82): note: see reference to class template instantiation 'p2Point<int>' being compiled
+c:\users\admin\documents\personal research\quadtree\exercise\motor2d\p2Point.h(124): warning C4244: 'return': conversion from 'float' to 'int', possible loss of data
+  PerfTimer.cpp
+  QuadTree.cpp
+QuadTree.cpp(84): warning C4018: '<': signed/unsigned mismatch
+  Scene.cpp
+  Timer.cpp
+  Render.cpp
+  Textures.cpp
+  Unit.cpp
+Unit.cpp(57): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
+Unit.cpp(57): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+Unit.cpp(88): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+Unit.cpp(156): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+Unit.cpp(157): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+  Window.cpp
+  pugixml.cpp
+     Creating library C:\Users\admin\Documents\personal research\Quadtree\Exercise\Release\QuadTree.lib and object C:\Users\admin\Documents\personal research\Quadtree\Exercise\Release\QuadTree.exp
+  Generating code
+  All 1625 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Finished generating code
+physfs.lib(physfs.obj) : warning LNK4049: locally defined symbol _sprintf imported
+  Motor2D.vcxproj -> C:\Users\admin\Documents\personal research\Quadtree\Exercise\Release\QuadTree.exe
+  Motor2D.vcxproj -> C:\Users\admin\Documents\personal research\Quadtree\Exercise\Release\QuadTree.pdb (Full PDB)
