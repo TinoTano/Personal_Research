@@ -160,8 +160,5 @@
     <Xml Include="..\Game\config.xml">
       <Filter>PersonalResearch</Filter>
     </Xml>
-    <Xml Include="..\Game\GameData.xml">
-      <Filter>PersonalResearch</Filter>
-    </Xml>
   </ItemGroup>
 </Project>
